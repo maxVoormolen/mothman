@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 /// <summary>
 /// Control Ìnformation Trackpad!
@@ -13,15 +14,34 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public SteamVR_Action_Vector2 TouchPad;
+    public Transform CurrentTransform;
 
-    // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
-        
+        Vector2 touchpadValue = TouchPad.GetAxis(SteamVR_Input_Sources.Any);
+
+        //X van Trackpad
+        if (touchpadValue.x <= -0.4f)
+        {
+            CurrentTransform.transform.position = CurrentTransform.transform.position + new Vector3(0.0f, 0.0f, 0.01f);
+        }
+        else if (touchpadValue.x >= 0.4f)
+        {
+            CurrentTransform.transform.position = CurrentTransform.transform.position + new Vector3(0.0f, 0.0f, -0.01f);
+        }
+        else { }
+
+        //Y van Trackpad
+        if (touchpadValue.y <= -0.4f)
+        {
+            CurrentTransform.transform.position = CurrentTransform.transform.position + new Vector3(-0.01f, 0.0f, 0.0f);
+        }
+        else if (touchpadValue.y >= 0.4f)
+        {
+            CurrentTransform.transform.position = CurrentTransform.transform.position + new Vector3(0.01f, 0.0f, 0.0f);
+        }
+        else { }
     }
 }
