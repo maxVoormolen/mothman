@@ -7,6 +7,7 @@ public class Hand : MonoBehaviour
 {
     public SteamVR_Action_Boolean m_GrabAction = null;
 
+    private GameObject model;
     private SteamVR_Behaviour_Pose m_Pose = null;
     private FixedJoint m_joint = null;
 
@@ -17,6 +18,10 @@ public class Hand : MonoBehaviour
     {
         m_Pose = GetComponent<SteamVR_Behaviour_Pose>();
         m_joint = GetComponent<FixedJoint>();
+    }
+    private void Start()
+    {
+        model = GameObject.FindWithTag("controlerModel");
     }
 
     private void Update()
@@ -75,6 +80,7 @@ public class Hand : MonoBehaviour
         m_joint.connectedBody = targetBody;
 
         //set active hand
+        model.SetActive(false);
         m_curentInteractible.m_activeHand = this;
     }
     public void Drop()
@@ -88,6 +94,7 @@ public class Hand : MonoBehaviour
         targetBody.angularVelocity = m_Pose.GetAngularVelocity();
 
         //detatch
+        model.SetActive(true);
         m_joint.connectedBody = null;
 
         //clear
