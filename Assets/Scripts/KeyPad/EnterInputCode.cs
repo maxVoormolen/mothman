@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Valve.VR;
 
 public class EnterInputCode : MonoBehaviour
 {   
@@ -10,12 +11,13 @@ public class EnterInputCode : MonoBehaviour
     private int _inputLength = 4;
     private int[] _inputNumberList;//Input list for numbers
     private int _index = 0;
-    private CodeChecker _numberPad;  // the parent numberpad with the correct code
+    
+    public Action<int[]> unlockDoors;
 
       private void Start()
     {
         _inputNumberList = new int[_inputLength];
-        _numberPad = gameObject.GetComponentInParent<CodeChecker>();
+       
     }
 
 
@@ -38,12 +40,13 @@ public class EnterInputCode : MonoBehaviour
 
 
 
-    public void OnMouseDown()//calls the function to compare the input to the correct code
+    public void OnTriggerEnter(Collider other)//calls the function to compare the input to the correct code
     {
-        _numberPad.CompareInputCode(_inputNumberList);
+        unlockDoors(_inputNumberList);
+        
     }
 
-    public int[] getList()
+    public int[] GetList()
     {
         return _inputNumberList;
     }

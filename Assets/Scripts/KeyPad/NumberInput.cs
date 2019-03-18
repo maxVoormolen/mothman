@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 public class NumberInput : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class NumberInput : MonoBehaviour
     {
         _inputField = transform.parent.GetComponentInChildren<EnterInputCode>();
     }
-    private void OnMouseDown()//Adds a number to the inputlist according to numberToInput
+    private void OnTriggerEnter(Collider other)//Adds a number to the inputlist according to numberToInput
     {
         _inputField.AddNumber(numberToInput);
         

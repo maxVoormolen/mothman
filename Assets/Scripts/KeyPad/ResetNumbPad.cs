@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 public class ResetNumbPad : MonoBehaviour
 {
@@ -10,18 +11,19 @@ public class ResetNumbPad : MonoBehaviour
     void Start()
     {
         codeToReset = transform.parent.GetComponentInChildren<EnterInputCode>();
+        
     }
 
 
-    private void OnMouseDown()//cals the reset Method
+    private void OnTriggerEnter(Collider other)//cals the reset Method
     {
-        ResetCode();
+        ResetCode(codeToReset.GetList());
     }
-    private void ResetCode()// set the entire list to 0;
+    private void ResetCode(int[] list)// set the entire list to 0;
     {
-        for(int i = 0; i < codeToReset.getList().Length; i++)
+        for(int i = 0; i < list.Length; i++)
         {
-            codeToReset.getList()[i] = 0;
+            list[i] = 0;
             
         }
 
