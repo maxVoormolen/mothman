@@ -7,6 +7,8 @@ public class Hand : MonoBehaviour
 {
     public SteamVR_Action_Boolean m_GrabAction = null;
 
+    private SteamVR_RenderModel controllerModel;
+
     private GameObject model;
     private SteamVR_Behaviour_Pose m_Pose = null;
     private FixedJoint m_joint = null;
@@ -18,11 +20,10 @@ public class Hand : MonoBehaviour
     {
         m_Pose = GetComponent<SteamVR_Behaviour_Pose>();
         m_joint = GetComponent<FixedJoint>();
+        controllerModel = GetComponentInChildren<SteamVR_RenderModel>();
+
     }
-    private void Start()
-    {
-        model = GameObject.FindWithTag("controlerModel");
-    }
+
 
     private void Update()
     {
@@ -67,27 +68,20 @@ public class Hand : MonoBehaviour
         if (m_curentInteractible.m_activeHand)
             m_curentInteractible.m_activeHand.Drop();
 
-        //posision
-
-
-        //nodig? test later
-        //m_curentInteractible.transform.position = transform.position;
-        //of...
-        // m_curentInteractible.transform.position = transform.forward + new Vector3(0,0,1);
-
         // attach
         Rigidbody targetBody = m_curentInteractible.GetComponent<Rigidbody>();
         m_joint.connectedBody = targetBody;
 
         //set active hand
-        model.SetActive(false);
         m_curentInteractible.m_activeHand = this;
+        controllerModel.gameObject.SetActive(false);
     }
     public void Drop()
     {
         //null check
         if (!m_curentInteractible)
             return;
+
         //apply velocity
         Rigidbody targetBody = m_curentInteractible.GetComponent<Rigidbody>();
         targetBody.velocity = m_Pose.GetVelocity();
@@ -100,6 +94,7 @@ public class Hand : MonoBehaviour
         //clear
         m_curentInteractible.m_activeHand = null;
         m_curentInteractible = null;
+        controllerModel.gameObject.SetActive(true);
     }
     private Interactible GetNearestInteractible()
     {
