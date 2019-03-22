@@ -56,6 +56,6 @@ public class GlowStickCrack : MonoBehaviour {
             Renderer rend = GetComponent<Renderer>();
             rend.material.shader = Shader.Find("Light");
             
-            rend.material.color = new Color(0, 241, 9, 127);
+            rend.material.SetColor("Light", Color.green);
     }
 }
