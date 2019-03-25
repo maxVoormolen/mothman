@@ -18,16 +18,12 @@ public class GlowStickCrack : MonoBehaviour {
     private bool IsAlreadyDead = false;
     public bool SSH = false;
 
-    Color color = Color.white;
 
     void Start()
     {
         light1.enabled = false;
         light2.enabled = false;
-        color[0] = 0;
-        color[1] = 241;
-        color[2] = 9;
-        color[3] = 127;     
+    
     }
 
 
@@ -44,11 +40,6 @@ public class GlowStickCrack : MonoBehaviour {
 
     }
 
-    private float coloNumberConversion(float num)
-    {
-        return (num / 255.0f);
-    }
-
     IEnumerator EnableLights()
     {
 
@@ -56,14 +47,20 @@ public class GlowStickCrack : MonoBehaviour {
 
             light1.enabled = true;
             light2.enabled = true;
+            light1.color = Color.green;
+            light2.color = Color.green;
 
-            Renderer rend = GetComponent<Renderer>();
-            rend.material.shader = Shader.Find("Light");
-            
-            rend.material.SetColor("Light", Color.green);
+
+        
+            Renderer renderer = GetComponent<Renderer>();
+            Material mat = renderer.material;
+            float emission = Mathf.PingPong(Time.time, 0.3f);
+            Color baseColor = Color.green;
+            Color finalColor = baseColor * Mathf.LinearToGammaSpace(emission);
+            mat.SetColor("_EmissionColor", finalColor);
+
 
             yield return new WaitForSeconds(15.3f);
-
             FirstScareAudio.Play();
             yield return new WaitForSeconds(7.5f);
             SSH = true;
