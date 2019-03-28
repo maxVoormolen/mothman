@@ -8,6 +8,7 @@ TagManager:
   - FxTemporaire
   - cube
   - controlerModel
+  - Floor
   layers:
   - Default
   - TransparentFX
