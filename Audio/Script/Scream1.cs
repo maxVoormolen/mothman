@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Scream1 : MonoBehaviour
 {
+    [SerializeField]
+    public JumpScare1 JS1;
 
     [SerializeField]
     AudioSource ScreamAudio;
@@ -29,10 +31,10 @@ public class Scream1 : MonoBehaviour
 
     void Update()
     {
-        
 
 
-        if (VRHeadset.transform.position.magnitude <= Corner1.magnitude && VRHeadset.transform.position.magnitude <= Corner2.magnitude && IsPlayed == false)
+
+        if (VRHeadset.transform.position.magnitude <= Corner1.magnitude && VRHeadset.transform.position.magnitude <= Corner2.magnitude && IsPlayed == false && JS1.IsReady == true)
          {
             ScreamAudio.Play();
             StartCoroutine(LightFlicker());
@@ -126,6 +128,7 @@ public class Scream1 : MonoBehaviour
         light1.enabled = true;
         light2.enabled = true;
         GreenLight();
+        
 
 
     }

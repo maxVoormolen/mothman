@@ -595,6 +595,7 @@ MonoBehaviour:
   light2: {fileID: 108386637110275112}
   Roomlight1: {fileID: 0}
   Roomlight2: {fileID: 0}
+  IsReady: 0
 --- !u!114 &114521985849435414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -606,6 +607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95515684746d41d4d8c2d39addc3490b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  JS1: {fileID: 114424546717533840}
   ScreamAudio: {fileID: 82081488887997136}
   light1: {fileID: 108386637110275112}
   light2: {fileID: 108911242849293828}

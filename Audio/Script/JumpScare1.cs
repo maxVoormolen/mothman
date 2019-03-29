@@ -17,6 +17,7 @@ public class JumpScare1 : MonoBehaviour {
     private Light Roomlight2;
 
     private bool stop = false;
+    public bool IsReady = false;
 
     void Start () {
 		
@@ -132,7 +133,7 @@ public class JumpScare1 : MonoBehaviour {
         yield return new WaitForSeconds(0.8f);
         Roomlight1.enabled = true;
         Roomlight2.enabled = true;
-
+        IsReady = true;
 
 
     }
