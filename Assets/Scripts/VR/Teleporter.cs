@@ -7,7 +7,7 @@ public class Teleporter : MonoBehaviour
 {
     public GameObject m_Pointer;
     public SteamVR_Action_Boolean m_TeleportAction;
-    
+
     private SteamVR_Behaviour_Pose m_Pose = null;
     private bool m_HasPosition = false;
     private bool m_IsTeleporting = false;
@@ -18,7 +18,7 @@ public class Teleporter : MonoBehaviour
     {
         m_Pose = GetComponent<SteamVR_Behaviour_Pose>();
     }
-    
+
     private void Update()
     {
         //pointer
@@ -76,7 +76,7 @@ public class Teleporter : MonoBehaviour
         RaycastHit hit;
 
         //If it's a hit
-        if(Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag == "Floor")
+        if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag == "Floor")
         {
             m_Pointer.transform.position = hit.point;
             return true;

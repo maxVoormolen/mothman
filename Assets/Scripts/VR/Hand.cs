@@ -8,7 +8,7 @@ public class Hand : MonoBehaviour
     public SteamVR_Action_Boolean m_GrabAction = null;
 
     private SteamVR_RenderModel controllerModel;
-    
+
     private SteamVR_Behaviour_Pose m_Pose = null;
     private FixedJoint m_joint = null;
 
