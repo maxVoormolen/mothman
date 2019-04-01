@@ -30,7 +30,7 @@ public class AudioManager : MonoBehaviour
         {
             SetVolume(0);
             SetVolume(1);
-            Debug.Log("Hallo");
+            
         }
         
     }
@@ -40,25 +40,22 @@ public class AudioManager : MonoBehaviour
         return _sliderList;
     }
 
-    public void SetList(int i , Slider slider)
+    public void SetList(int index , Slider slider)
     {
         // _sliderList[i] = slider;
         _sliderList.Add(slider);
+
     }
 
     public void SetVolume(int index)
     {
-        Debug.Log(index);
+       
         for (int i = 0; i < _masterList.Count; i++)
         {
-            
-            _masterList[i].GetComponent<AudioSource>().volume = _sliderList[index].value;
-            
-           
 
-            
-            //Debug.Log(i);
-            //Debug.Log(_masterList.Count);
+            // var volume = _masterList[i].GetComponent<AudioSource>().volume
+         //   var newVolume = 
+            _masterList[i].GetComponent<AudioSource>().volume = _sliderList[0].value;
        
         }
     }

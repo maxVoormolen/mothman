@@ -18,8 +18,20 @@ public class SliderManager : MonoBehaviour
         for (int i=0; i < _sliderlist.Count; i++)
         {
             
-            //_sliderlist[i].value = auManager.GetList()[i].GetComponent<AudioSource>().volume;
+            
             auManager.SetList(i,_sliderlist[i]);
+
+        }
+    }
+    private void Start()
+    {   
+        
+        for (int i = 0; i < auManager.GetList().Count; i++)
+        {
+
+            _sliderlist[i].value = auManager.GetList()[i].GetComponent<AudioSource>().volume;
+            Debug.Log(_sliderlist[i]);
+            Debug.Log(auManager.GetList()[i]);
 
         }
     }
@@ -27,6 +39,6 @@ public class SliderManager : MonoBehaviour
     //// Update is called once per frame
     //void Update()
     //{
-        
+
     //}
 }
