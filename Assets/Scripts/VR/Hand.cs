@@ -15,6 +15,8 @@ public class Hand : MonoBehaviour
     private Interactible m_curentInteractible = null;
     public List<Interactible> m_contactInteracitbles = new List<Interactible>();
 
+    public GlowStickCrack glowStickCrack;
+
     private void Awake()
     {
         m_Pose = GetComponent<SteamVR_Behaviour_Pose>();
@@ -39,14 +41,23 @@ public class Hand : MonoBehaviour
             Drop();
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         //tag check
         if (!other.gameObject.CompareTag("cube"))
             return;
 
+        if (other.gameObject.name != "GlowStick")
+        {
+            GameObject Light = GameObject.FindGameObjectWithTag("cube");
+            glowStickCrack = Light.GetComponent<GlowStickCrack>();
+            glowStickCrack.isPickedUp = true;
+        }
+
         m_contactInteracitbles.Add(other.gameObject.GetComponent<Interactible>());
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (!other.gameObject.CompareTag("cube"))
@@ -54,6 +65,7 @@ public class Hand : MonoBehaviour
 
         m_contactInteracitbles.Remove(other.gameObject.GetComponent<Interactible>());
     }
+
     public void Pickup()
     {
         // get nearest
@@ -75,6 +87,7 @@ public class Hand : MonoBehaviour
         m_curentInteractible.m_activeHand = this;
         controllerModel.gameObject.SetActive(false);
     }
+
     public void Drop()
     {
         //null check
@@ -94,6 +107,7 @@ public class Hand : MonoBehaviour
         m_curentInteractible = null;
         controllerModel.gameObject.SetActive(true);
     }
+
     private Interactible GetNearestInteractible()
     {
         Interactible nearest = null;
@@ -109,7 +123,6 @@ public class Hand : MonoBehaviour
                 nearest = interactible;
             }
         }
-
         return nearest;
     }
 }
