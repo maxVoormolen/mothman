@@ -13,27 +13,35 @@ public class SliderManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+
         _sliderlist = gameObject.GetComponentsInChildren<Slider>().ToList();
         auManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-        for (int i=0; i < _sliderlist.Count; i++)
+        for (int i = 0; i < _sliderlist.Count; i++)
         {
-            
-            
-            auManager.SetList(i,_sliderlist[i]);
 
+
+            auManager.SetList(i, _sliderlist[i]);
+
+
+        }
+
+        for (int i = 0; i < auManager.GetMList().Count; i++)
+        {
+
+            _sliderlist[0].value = auManager.GetMList()[0].GetComponent<AudioSource>().volume;
+            Debug.Log(_sliderlist[i]);
+            Debug.Log(auManager.GetMList()[i]);
+
+        }
+        for (int i = 0; i < auManager.GetEList().Count; i++)
+        {
+            _sliderlist[1].value = auManager.GetEList()[0].GetComponent<AudioSource>().volume;
+
+            Debug.Log("Test1");
         }
     }
     private void Start()
-    {   
-        
-        for (int i = 0; i < auManager.GetList().Count; i++)
-        {
-
-            _sliderlist[i].value = auManager.GetList()[i].GetComponent<AudioSource>().volume;
-            Debug.Log(_sliderlist[i]);
-            Debug.Log(auManager.GetList()[i]);
-
-        }
+    {
     }
 
     //// Update is called once per frame
