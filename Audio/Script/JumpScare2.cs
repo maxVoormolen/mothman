@@ -63,8 +63,7 @@ public class JumpScare2 : MonoBehaviour {
             IsPlayed3 = true;
         }
 
-      //  if (VRHeadset.transform.position.x >= 0f && VRHeadset.transform.position.z <= 0f && IsPlayed4 == false)
-        if (Input.GetKeyDown("j") && IsPlayed4 == false)
+        if (VRHeadset.transform.position.x >= 0f && VRHeadset.transform.position.z <= 0f && IsPlayed4 == false)
         {
             Play4 = true;
             StartCoroutine(JumpScares());
@@ -301,23 +300,43 @@ public class JumpScare2 : MonoBehaviour {
             JS1.RedLight();
             light1.enabled = true;
             light2.enabled = true;
-            yield return new WaitForSeconds(4.5f);
+            yield return new WaitForSeconds(3.6f);
             JS1.DeadLight();
             light1.enabled = false;
             light2.enabled = false;
-            yield return new WaitForSeconds(0.7f);
+            yield return new WaitForSeconds(0.6f);
             JS1.RedLight();
             light1.enabled = true;
             light2.enabled = true;
-            yield return new WaitForSeconds(9.3f);
+            yield return new WaitForSeconds(3.1f);
             JS1.DeadLight();
             light1.enabled = false;
             light2.enabled = false;
-            yield return new WaitForSeconds(0.7f);
+            yield return new WaitForSeconds(0.9f);
             JS1.RedLight();
             light1.enabled = true;
             light2.enabled = true;
-            yield return new WaitForSeconds(0.7f);
+            yield return new WaitForSeconds(3.2f);
+            JS1.DeadLight();
+            light1.enabled = false;
+            light2.enabled = false;
+            yield return new WaitForSeconds(0.9f);
+            JS1.RedLight();
+            light1.enabled = true;
+            light2.enabled = true;
+            yield return new WaitForSeconds(3.2f);
+            JS1.DeadLight();
+            light1.enabled = false;
+            light2.enabled = false;
+            yield return new WaitForSeconds(1.5f);
+            JS1.RedLight();
+            light1.enabled = true;
+            light2.enabled = true;
+            yield return new WaitForSeconds(3.2f);
+            JS1.DeadLight();
+            light1.enabled = false;
+            light2.enabled = false;
+            yield return new WaitForSeconds(5.2f);
             JS1.GreenLight();
             light1.color = Color.green;
             light2.color = Color.green;
@@ -327,12 +346,42 @@ public class JumpScare2 : MonoBehaviour {
 
         if (Play5 == true)
         {
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.5f);
+            JS1.RedLight();
             light1.color = Color.red;
             light2.color = Color.red;
             light1.enabled = true;
             light2.enabled = true;
-            yield return new WaitForSeconds(2.6f);
+            yield return new WaitForSeconds(1.5f);
+            JS1.DeadLight();
+            light1.enabled = false;
+            light2.enabled = false;
+            yield return new WaitForSeconds(0.6f);
+            JS1.RedLight();
+            light1.enabled = true;
+            light2.enabled = true;
+            yield return new WaitForSeconds(1.5f);
+            JS1.DeadLight();
+            light1.enabled = false;
+            light2.enabled = false;
+            yield return new WaitForSeconds(0.6f);
+            JS1.RedLight();
+            light1.enabled = true;
+            light2.enabled = true;
+            yield return new WaitForSeconds(1.5f);
+            JS1.DeadLight();
+            light1.enabled = false;
+            light2.enabled = false;
+            yield return new WaitForSeconds(0.6f);
+            JS1.RedLight();
+            light1.enabled = true;
+            light2.enabled = true;
+            yield return new WaitForSeconds(1.4f);
+            JS1.DeadLight();
+            light1.enabled = false;
+            light2.enabled = false;
+            yield return new WaitForSeconds(7.6f);
+            JS1.GreenLight();
             light1.color = Color.green;
             light2.color = Color.green;
             light1.enabled = true;
