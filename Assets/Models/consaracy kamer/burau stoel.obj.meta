@@ -1,0 +1,148 @@
+fileFormatVersion: 2
+guid: 824e8950ea4abdc48b46132f6453cf2a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: pasted__stoel_stoel
+    100004: stoel_pasted__frame_pasted__polySurface2
+    100006: stoel_pasted__pasted__pasted__pasted__pasted__steun_pasted__pasted__pasted__group3_pasted__pasted__group4_pasted__group8
+    100008: stoel_pasted__pasted__pasted__pasted__steun_pasted__pasted__group3_pasted__group4
+    100010: stoel_pasted__pasted__steun
+    100012: stoel_pasted__pasted__steun_frame1_pasted__group
+    100014: stoel_pasted__pasted__steun_frame3
+    100016: stoel_pasted__pCylinder1
+    100018: stoel_pasted__polySurface1_pasted__frame
+    400000: //RootNode
+    400002: pasted__stoel_stoel
+    400004: stoel_pasted__frame_pasted__polySurface2
+    400006: stoel_pasted__pasted__pasted__pasted__pasted__steun_pasted__pasted__pasted__group3_pasted__pasted__group4_pasted__group8
+    400008: stoel_pasted__pasted__pasted__pasted__steun_pasted__pasted__group3_pasted__group4
+    400010: stoel_pasted__pasted__steun
+    400012: stoel_pasted__pasted__steun_frame1_pasted__group
+    400014: stoel_pasted__pasted__steun_frame3
+    400016: stoel_pasted__pCylinder1
+    400018: stoel_pasted__polySurface1_pasted__frame
+    2100000: pasted__stoel_stoelMat
+    2100002: stoel_pasted__frame_pasted__polySurface2Mat
+    2100004: stoel_pasted__pasted__pasted__pasted__pasted__steun_pasted__pasted__pasted__group3_pasted__pasted__group4_pasted__group8Mat
+    2100006: stoel_pasted__pasted__pasted__pasted__steun_pasted__pasted__group3_pasted__group4Mat
+    2100008: stoel_pasted__pasted__steunMat
+    2100010: stoel_pasted__pasted__steun_frame1_pasted__groupMat
+    2100012: stoel_pasted__pasted__steun_frame3Mat
+    2100014: stoel_pasted__pCylinder1Mat
+    2100016: stoel_pasted__polySurface1_pasted__frameMat
+    2300000: pasted__stoel_stoel
+    2300002: stoel_pasted__frame_pasted__polySurface2
+    2300004: stoel_pasted__pasted__pasted__pasted__pasted__steun_pasted__pasted__pasted__group3_pasted__pasted__group4_pasted__group8
+    2300006: stoel_pasted__pasted__pasted__pasted__steun_pasted__pasted__group3_pasted__group4
+    2300008: stoel_pasted__pasted__steun
+    2300010: stoel_pasted__pasted__steun_frame1_pasted__group
+    2300012: stoel_pasted__pasted__steun_frame3
+    2300014: stoel_pasted__pCylinder1
+    2300016: stoel_pasted__polySurface1_pasted__frame
+    3300000: pasted__stoel_stoel
+    3300002: stoel_pasted__frame_pasted__polySurface2
+    3300004: stoel_pasted__pasted__pasted__pasted__pasted__steun_pasted__pasted__pasted__group3_pasted__pasted__group4_pasted__group8
+    3300006: stoel_pasted__pasted__pasted__pasted__steun_pasted__pasted__group3_pasted__group4
+    3300008: stoel_pasted__pasted__steun
+    3300010: stoel_pasted__pasted__steun_frame1_pasted__group
+    3300012: stoel_pasted__pasted__steun_frame3
+    3300014: stoel_pasted__pCylinder1
+    3300016: stoel_pasted__polySurface1_pasted__frame
+    4300000: pasted__stoel_stoel
+    4300002: stoel_pasted__frame_pasted__polySurface2
+    4300004: stoel_pasted__pasted__pasted__pasted__pasted__steun_pasted__pasted__pasted__group3_pasted__pasted__group4_pasted__group8
+    4300006: stoel_pasted__pasted__pasted__pasted__steun_pasted__pasted__group3_pasted__group4
+    4300008: stoel_pasted__pasted__steun
+    4300010: stoel_pasted__pasted__steun_frame1_pasted__group
+    4300012: stoel_pasted__pasted__steun_frame3
+    4300014: stoel_pasted__pCylinder1
+    4300016: stoel_pasted__polySurface1_pasted__frame
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

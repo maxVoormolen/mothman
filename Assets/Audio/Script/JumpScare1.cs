@@ -33,7 +33,7 @@ public class JumpScare1 : MonoBehaviour {
         }
 	}
 
-    void RedLight()
+    public void RedLight()
     {
         Renderer renderer = GetComponent<Renderer>();
         Material mat = renderer.material;
@@ -43,7 +43,7 @@ public class JumpScare1 : MonoBehaviour {
         mat.SetColor("_EmissionColor", finalColor);
     }
 
-    void GreenLight()
+    public void GreenLight()
     {
         Renderer renderer = GetComponent<Renderer>();
         Material mat = renderer.material;
@@ -53,7 +53,7 @@ public class JumpScare1 : MonoBehaviour {
         mat.SetColor("_EmissionColor", finalColor);
     }
 
-    void DeadLight()
+    public void DeadLight()
     {
         Renderer renderer = GetComponent<Renderer>();
         Material mat = renderer.material;

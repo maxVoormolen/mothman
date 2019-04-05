@@ -9,6 +9,12 @@ TagManager:
   - cube
   - controlerModel
   - Floor
+  - AudioPanel
+  - MasterAudio
+  - Audio
+  - EffectsAudio
+  - Code
+  - Button
   layers:
   - Default
   - TransparentFX
