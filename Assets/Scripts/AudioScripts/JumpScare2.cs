@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class JumpScare2 : MonoBehaviour
 {
-
     public GlowStickCrack GSC;
     public JumpScare1 JS1;
     public Wheel ME;
@@ -26,7 +25,6 @@ public class JumpScare2 : MonoBehaviour
     private Light light2;
 
     public Transform VRHeadset;
-    public bool test = false;
 
     private bool IsPlayed1 = false;
     private bool IsPlayed2 = false;
@@ -42,7 +40,7 @@ public class JumpScare2 : MonoBehaviour
 
     private void Update()
     {
-        if (VRHeadset.transform.position.x <= 5.5f && VRHeadset.transform.position.z >= -6f && VRHeadset.transform.position.z <= -5f && IsPlayed1 == false)
+        if (VRHeadset.transform.position.x <= 5.5f && VRHeadset.transform.position.z >= -6f && VRHeadset.transform.position.z <= -5f && !IsPlayed1)
         {
             Play1 = true;
             StartCoroutine(JumpScares());
@@ -50,7 +48,7 @@ public class JumpScare2 : MonoBehaviour
             IsPlayed1 = true;
         }
 
-        /*if (VRHeadset.transform.position.x >= 12f && VRHeadset.transform.position.x <= 10f && VRHeadset.transform.position.z <= 1f && IsPlayed2 == false)
+        /*if (VRHeadset.transform.position.x >= 12f && VRHeadset.transform.position.x <= 10f && VRHeadset.transform.position.z <= 1f && !IsPlayed2)
         {
             Play2 = true;
             StartCoroutine(JumpScares());
@@ -58,7 +56,7 @@ public class JumpScare2 : MonoBehaviour
             IsPlayed2 = true;
         }*/
 
-        if (VRHeadset.transform.position.x <= 12f && VRHeadset.transform.position.x >= 10f && VRHeadset.transform.position.z <= 1f && IsPlayed3 == false)
+        if (VRHeadset.transform.position.x <= 12f && VRHeadset.transform.position.x >= 10f && VRHeadset.transform.position.z <= 1f && !IsPlayed3)
         {
             Play3 = true;
             StartCoroutine(JumpScares());
@@ -66,7 +64,7 @@ public class JumpScare2 : MonoBehaviour
             IsPlayed3 = true;
         }
 
-        if (VRHeadset.transform.position.x >= -13f && VRHeadset.transform.position.x <= -10f && VRHeadset.transform.position.z >= 1f && IsPlayed4 == false)
+        if (VRHeadset.transform.position.x >= -13f && VRHeadset.transform.position.x <= -10f && VRHeadset.transform.position.z >= 1f && !IsPlayed4)
         {
             Play4 = true;
             StartCoroutine(JumpScares());
@@ -74,7 +72,7 @@ public class JumpScare2 : MonoBehaviour
             IsPlayed4 = true;
         }
 
-        if (VRHeadset.transform.position.x >= -7f && VRHeadset.transform.position.x <= -3f && VRHeadset.transform.position.z >= 3f && IsPlayed5 == false)
+        if (VRHeadset.transform.position.x >= -7f && VRHeadset.transform.position.x <= -3f && VRHeadset.transform.position.z >= 3f && !IsPlayed5)
         {
             Play5 = true;
             StartCoroutine(JumpScares());

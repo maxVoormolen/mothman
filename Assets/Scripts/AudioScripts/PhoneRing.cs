@@ -10,14 +10,12 @@ public class PhoneRing : MonoBehaviour {
     AudioSource ClickAudio;
     [SerializeField]
     AudioSource RuisAudio;
-
-
+    
     [SerializeField]
     private Light light1;
     [SerializeField]
     private Light light2;
-
-
+    
     private bool Rings = false;
     private bool PhoneUp = false;
     private bool OnThePoint = false;
@@ -37,7 +35,7 @@ public class PhoneRing : MonoBehaviour {
     void Update()
     {
         //Als hij in de op n punt komt gaat hij ringen (zelf lekker codes bij doen XD)
-        if (IsAlreadyDead == false && OnThePoint == true )
+        if (!IsAlreadyDead && OnThePoint)
         {
             IsOn = true;
             Rings = true;
@@ -53,8 +51,7 @@ public class PhoneRing : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-
-            if (Rings == true)
+            if (Rings)
             {
                 PhoneUp = true;
             }
@@ -63,24 +60,18 @@ public class PhoneRing : MonoBehaviour {
 
     IEnumerator PhoneRings()
     {
-
-        if (IsOn == true)
+        if (IsOn)
         {
-
-
-           while (Rings == true)
+           while (Rings)
             {
                 RingingAudio.Play();
                 light1.enabled = true;
                 yield return new WaitForSeconds(1.4f);
                 light1.enabled = false;
                 yield return new WaitForSeconds(1.4f);
-
             }
-
-
-
-            if (PhoneUp == true)
+           
+            if (PhoneUp)
             {
                 Rings = false;
                 RingingAudio.Stop();
@@ -95,12 +86,8 @@ public class PhoneRing : MonoBehaviour {
                 ClickAudio.Play();
             }
 
-
-
-
             IsOn = false;
             IsAlreadyDead = true;
-
         }
     }
 }

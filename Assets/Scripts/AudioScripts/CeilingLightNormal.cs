@@ -16,30 +16,21 @@ public class CeilingLightNormal : MonoBehaviour {
 
     private bool IsOn = false;
 
-    void Start()
-    {
-
-    }
-
-
     void Update()
     {
-
-        if (Input.GetKeyDown("w") && IsOn == false)
+        if (Input.GetKeyDown("w") && !IsOn)
         {
             IsOn = true;
             ClickAudio.Play();
             LampAudio.Play();
             StartCoroutine(LampTrigger());
         }
-
     }
-
 
     IEnumerator LampTrigger()
     {
 
-        if (IsOn == true)
+        if (IsOn)
         {
             while (true)
             {

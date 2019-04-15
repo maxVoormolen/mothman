@@ -15,12 +15,11 @@ public class Scream1 : MonoBehaviour
     private Light light2;
 
     public Transform VRHeadset;
-
     private bool IsPlayed = false;
 
     private void Update()
     {
-        if (VRHeadset.transform.position.x >= 3f && IsPlayed == false && JS1.IsReady == true)
+        if (VRHeadset.transform.position.x >= 3f && !IsPlayed && JS1.IsReady)
         {
             ScreamAudio.Play();
             StartCoroutine(LightFlicker());
@@ -60,7 +59,6 @@ public class Scream1 : MonoBehaviour
 
     IEnumerator LightFlicker()
     {
-
         light1.enabled = false;
         light2.enabled = false;
         DeadLight();
@@ -112,8 +110,5 @@ public class Scream1 : MonoBehaviour
         light1.enabled = true;
         light2.enabled = true;
         GreenLight();
-        
-
-
     }
 }

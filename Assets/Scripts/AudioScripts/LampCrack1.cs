@@ -22,44 +22,33 @@ public class LampCrack1 : MonoBehaviour {
 
     public SteamVR_Action_Boolean m_GrabAction = null;
     private SteamVR_Behaviour_Pose m_Pose = null;
-
-    void Start () {
-
-    }
 	
 	void Update () {
-        if (m_GrabAction.GetStateDown(m_Pose.inputSource) && IsAlreadyDead == false)
+        if (m_GrabAction.GetStateDown(m_Pose.inputSource) && !IsAlreadyDead)
         {
             IsOn = true;
             StartCoroutine(LampAudioDead());
         }
-        if (Input.GetKeyDown("a") && IsAlreadyDead == false)
+        if (Input.GetKeyDown("a") && !IsAlreadyDead)
         {
             IsOn = true;
             StartCoroutine(LampAudioDead());
         }
-
 	}
 
-
     IEnumerator LampAudioDead()
-    {      
-            
+    {
         if (IsOn == true)
         {
-            
             ClickAudio.Play();
             LampAudio.Play();
             yield return new WaitForSeconds(0.3f);
-
             light1.enabled = true;
             light2.enabled = true;
             yield return new WaitForSeconds(4);
-  
             LampAudio.Stop();
             BulbBreakAudio.Play();
             yield return new WaitForSeconds(0.4f);
-
             light1.enabled = false;
             light2.enabled = false;
             yield return new WaitForSeconds(0.1f);
@@ -74,12 +63,9 @@ public class LampCrack1 : MonoBehaviour {
             yield return new WaitForSeconds(0.2f);
             light1.enabled = false;
             light2.enabled = false;
-
-
-
+            
             IsOn = false;
             IsAlreadyDead = true;
-
         }
     }
 }

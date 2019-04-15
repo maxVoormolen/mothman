@@ -45,15 +45,12 @@ public class GlowStickCrack : MonoBehaviour {
 
     IEnumerator EnableLights()
     {
-
             yield return new WaitForSeconds(0.3f);
 
             light1.enabled = true;
             light2.enabled = true;
             light1.color = Color.green;
             light2.color = Color.green;
-
-
         
             Renderer renderer = GetComponent<Renderer>();
             Material mat = renderer.material;
@@ -61,8 +58,7 @@ public class GlowStickCrack : MonoBehaviour {
             Color baseColor = Color.green;
             Color finalColor = baseColor * Mathf.LinearToGammaSpace(emission);
             mat.SetColor("_EmissionColor", finalColor);
-
-
+        
             yield return new WaitForSeconds(1.0f);
             FirstScareAudio.Play();
             yield return new WaitForSeconds(7.5f);

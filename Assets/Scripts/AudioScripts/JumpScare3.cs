@@ -25,7 +25,6 @@ public class JumpScare3 : MonoBehaviour
 
     private float m_FadeTime = 0.8f;
     private bool IsPlayed = false;
-    public bool test = false;
 
     private void Awake()
     {
@@ -37,7 +36,7 @@ public class JumpScare3 : MonoBehaviour
 
     private void Update()
     {
-        if (VRHeadset.transform.position.x <= 13f && VRHeadset.transform.position.x >= 10f && VRHeadset.transform.position.z <= -13f && IsPlayed == false || test && !IsPlayed)
+        if (VRHeadset.transform.position.x <= 13f && VRHeadset.transform.position.x >= 10f && VRHeadset.transform.position.z <= -13f && !IsPlayed)
         {
             SteamVR_Fade.Start(Color.black, m_FadeTime, true);
             JumpScare3Audio.Play();

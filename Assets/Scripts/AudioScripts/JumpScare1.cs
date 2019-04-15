@@ -27,7 +27,7 @@ public class JumpScare1 : MonoBehaviour {
 	
 	
 	void Update () {
-        if (js1.SSH == true && stop == false)
+        if (js1.SSH && !stop)
         {
             StartCoroutine(EnableLights());
         }

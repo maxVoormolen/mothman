@@ -13,7 +13,7 @@ public class Breathing1 : MonoBehaviour {
 
     private void Update()
     {
-        if (VRHeadset.transform.position.x >= 10f && VRHeadset.transform.position.z <= -7f && IsPlayed == false)
+        if (VRHeadset.transform.position.x >= 10f && VRHeadset.transform.position.z <= -7f && !IsPlayed)
         {
             BreathingAudio.Play();          
             IsPlayed = true;

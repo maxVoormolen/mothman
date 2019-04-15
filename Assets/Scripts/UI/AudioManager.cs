@@ -35,9 +35,7 @@ public class AudioManager : MonoBehaviour
         {
             SetVolume(0);
             SetVolume(1);
-            
         }
-        
     }
 
     public List<Slider> GetSliderList()
@@ -49,8 +47,6 @@ public class AudioManager : MonoBehaviour
     {
          _sliderList[index] = slider;
         Debug.Log(_sliderList[index].value);
-        //_sliderList.Add(slider);
-
     }
 
     public void SetVolume(int index)
@@ -58,9 +54,6 @@ public class AudioManager : MonoBehaviour
        
         for (int i = 0; i < _masterList.Count; i++)
         {
-
-            // var volume = _masterList[i].GetComponent<AudioSource>().volume
-         //   var newVolume = 
             _masterList[i].GetComponent<AudioSource>().volume = _sliderList[0].value;
             
             Debug.Log("Test");
@@ -70,5 +63,4 @@ public class AudioManager : MonoBehaviour
             _effectList[i].GetComponent<AudioSource>().volume = _sliderList[1].value;
         }
     }
-
 }   

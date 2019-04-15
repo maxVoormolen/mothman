@@ -11,25 +11,18 @@ public class BijlSounds : MonoBehaviour {
 
     private bool ScaryAudioDead = false;
     private bool HitsDoor = false;
-
-    void Start () {
-		
-	}
 	
-	
-	void Update () {
-
-        if (Input.GetKeyDown("u") && ScaryAudioDead == false)
+	void Update ()
+    {
+        if (Input.GetKeyDown("u") && !ScaryAudioDead)
         {
             ScaryAudio.Play();
-            ScaryAudioDead = true;       
-
+            ScaryAudioDead = true;
         }
 
         if (HitsDoor == true)
         {
             BijlAudio.Play();
         }
-
     }
 }
