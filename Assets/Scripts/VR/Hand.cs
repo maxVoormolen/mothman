@@ -22,9 +22,6 @@ public class Hand : MonoBehaviour
         m_Pose = GetComponent<SteamVR_Behaviour_Pose>();
         m_joint = GetComponent<FixedJoint>();
         controllerModel = GetComponentInChildren<SteamVR_RenderModel>();
-
-        /*GameObject Light = GameObject.FindGameObjectWithTag("cube");
-        glowStickCrack = Light.GetComponent<GlowStickCrack>();*/
     }
 
 

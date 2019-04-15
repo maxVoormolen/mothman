@@ -5,7 +5,7 @@ using Valve.VR;
 
 public class KeyPad : MonoBehaviour
 {
-    public NumberInput numberInput;
+    //public NumberInput numberInput;
     public GameObject m_Pointer;
     public SteamVR_Action_Boolean m_TeleportAction;
 
@@ -24,8 +24,8 @@ public class KeyPad : MonoBehaviour
         m_HasPosition = UpdatePointer();
         m_Pointer.SetActive(m_HasPosition);
         //Teleporter
-        if (m_TeleportAction.GetStateUp(m_Pose.inputSource))
-            numberInput.AddNumber();
+        /*if (m_TeleportAction.GetStateUp(m_Pose.inputSource))
+            numberInput.AddNumber();*/
     }
 
     private bool UpdatePointer()
@@ -38,6 +38,7 @@ public class KeyPad : MonoBehaviour
         if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag == "Code")
         {
             m_Pointer.transform.position = hit.point;
+            hit.collider.gameObject.GetComponent<NumberInput>().AddNumber();
             return true;
         }
 
