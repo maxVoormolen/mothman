@@ -23,6 +23,8 @@ public class Hand : MonoBehaviour
         m_joint = GetComponent<FixedJoint>();
         controllerModel = GetComponentInChildren<SteamVR_RenderModel>();
 
+        /*GameObject Light = GameObject.FindGameObjectWithTag("cube");
+        glowStickCrack = Light.GetComponent<GlowStickCrack>();*/
     }
 
 
@@ -47,15 +49,13 @@ public class Hand : MonoBehaviour
         //tag check
         if (!other.gameObject.CompareTag("cube"))
             return;
+        
+        m_contactInteracitbles.Add(other.gameObject.GetComponent<Interactible>());
 
         if (other.gameObject.name != "GlowStick")
         {
-            GameObject Light = GameObject.FindGameObjectWithTag("cube");
-            glowStickCrack = Light.GetComponent<GlowStickCrack>();
             glowStickCrack.isPickedUp = true;
         }
-
-        m_contactInteracitbles.Add(other.gameObject.GetComponent<Interactible>());
     }
 
     private void OnTriggerExit(Collider other)
