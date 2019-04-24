@@ -81,15 +81,6 @@ public class Teleporter : MonoBehaviour
             m_Pointer.transform.position = hit.point;
             return true;
         }
-        
-        if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag == "Code"/*hit.collider.tag == ("Code")*/)
-        {
-            hit.transform.SendMessageUpwards("AddNumber");
-        }
-        else if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag == "Button"/*hit.collider.tag == ("Button")*/)
-        {
-            hit.transform.SendMessageUpwards("LoadScene");
-        }
 
         // If not a hit
         return false;

@@ -4,46 +4,53 @@ using UnityEngine;
 
 public class Wheel : MonoBehaviour
 {
-    public GameObject Wiel;
-    public GameObject As;
-    public GameObject Spaken;
+    [SerializeField]
+    private GameObject[] WholeWheel = new GameObject[3];
 
-    public AudioSource MachineSounds;
-    
-    public Light Spotlight1;
-    public Light Spotlight2;
-    public Light light1;
-    public Light light2;
+    [SerializeField]
+    private Light[] Spotlights = new Light[4];
+
+    [SerializeField]
+    private AudioSource MachineSounds;
 
     private bool Playing = true;
     public bool ActivateMacines;
 
     void Start()
     {
-        Spotlight1.enabled = false;
-        Spotlight2.enabled = false;
-        light1.enabled = false;
-        light2.enabled = false;
-    }
-    
-    void Update()
-    {
-        if (ActivateMacines)
+        //Set the spotlight on false.
+        for (int i = 0; i <= Spotlights.Length; i++)
         {
-            if (Playing)
+            Spotlights[i].enabled = false;
+        }
+    }
+
+    public bool MyBool
+    {
+        get { return ActivateMacines; }
+        set
+        {
+            if (value == ActivateMacines)
+                return;
+
+            ActivateMacines = value;
+            if (ActivateMacines)
             {
                 MachineSounds.Play();
-                Playing = false;
+
+                for (int i = 0; i <= Spotlights.Length; i++)
+                {
+                    Spotlights[i].enabled = true;
+                }
+
+                while (Playing)
+                {
+                    for (int i = 0; i <= WholeWheel.Length; i++)
+                    {
+                        WholeWheel[i].transform.Rotate(0, 1, 0);
+                    }
+                }
             }
-
-            Spotlight1.enabled = true;
-            Spotlight2.enabled = true;
-            light1.enabled = true;
-            light2.enabled = true;
-
-            Wiel.transform.Rotate(0, 1, 0);
-            As.transform.Rotate(0, 1, 0);
-            Spaken.transform.Rotate(0, 1, 0);
         }
     }
 }

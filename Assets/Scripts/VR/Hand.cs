@@ -15,7 +15,7 @@ public class Hand : MonoBehaviour
     private Interactible m_curentInteractible = null;
     public List<Interactible> m_contactInteracitbles = new List<Interactible>();
 
-    public GlowStickCrack glowStickCrack;
+    public JumpScaresManager jumpScaresManager;
 
     private void Awake()
     {
@@ -51,7 +51,7 @@ public class Hand : MonoBehaviour
 
         if (other.gameObject.name != "GlowStick")
         {
-            glowStickCrack.isPickedUp = true;
+            jumpScaresManager.isPickedUp = true;
         }
     }
 

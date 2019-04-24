@@ -23,9 +23,6 @@ public class KeyPad : MonoBehaviour
         //pointer
         m_HasPosition = UpdatePointer();
         m_Pointer.SetActive(m_HasPosition);
-        //Teleporter
-        /*if (m_TeleportAction.GetStateUp(m_Pose.inputSource))
-            numberInput.AddNumber();*/
     }
 
     private bool UpdatePointer()

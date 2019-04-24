@@ -81,15 +81,14 @@ GameObject:
   - component: {fileID: 33020442132257810}
   - component: {fileID: 23987490562780304}
   - component: {fileID: 54054591981699094}
+  - component: {fileID: 1785615960273029826}
+  - component: {fileID: 3261951607836509931}
+  - component: {fileID: 5892259285008476608}
+  - component: {fileID: 7412862982820715416}
+  - component: {fileID: 2063795248099482371}
   - component: {fileID: 82534216286053208}
   - component: {fileID: 82728581830466162}
-  - component: {fileID: 114424546717533840}
-  - component: {fileID: 114004385071925958}
   - component: {fileID: 82081488887997136}
-  - component: {fileID: 114521985849435414}
-  - component: {fileID: 1785615960273029826}
-  - component: {fileID: 2063795248099482371}
-  - component: {fileID: 8942555105996563978}
   m_Layer: 0
   m_Name: GlowStick
   m_TagString: cube
@@ -175,6 +174,93 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!65 &1785615960273029826
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354696869589136}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02559235, y: 0.022316987, z: 0.02559235}
+  m_Center: {x: 0.0000000023283064, y: -0.00070814975, z: -0.0000000023283064}
+--- !u!114 &3261951607836509931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354696869589136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e83221a89f3ca4aa3429b63ecb7e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light1: {fileID: 0}
+  light2: {fileID: 0}
+--- !u!114 &5892259285008476608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354696869589136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6150d542975a44fb5426c7b694e5e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light1: {fileID: 0}
+  light2: {fileID: 0}
+--- !u!114 &7412862982820715416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354696869589136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 658fd2cea0f292240acf1b64979e06cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kitchenManager: {fileID: 0}
+  clowstickManager: {fileID: 0}
+  wheel: {fileID: 0}
+  GlowStickCrackAudio: {fileID: 0}
+  FirstScareAudio: {fileID: 0}
+  ScreechAudio: {fileID: 0}
+  MothmanScreamAudio: {fileID: 0}
+  MonsterSoundsAudio: {fileID: 0}
+  CryingAudio: {fileID: 0}
+  ViolinAudio: {fileID: 0}
+  ScreamAudio: {fileID: 0}
+  BreathingAudio: {fileID: 0}
+  JumpScare3Audio: {fileID: 0}
+  DoorKeuken: {fileID: 0}
+  VRHeadset: {fileID: 0}
+  MothmanEyesList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  isPickedUp: 0
+--- !u!114 &2063795248099482371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354696869589136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18b4d829c06177747ba93c487b3eb1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_activeHand: {fileID: 0}
 --- !u!82 &82534216286053208
 AudioSource:
   m_ObjectHideFlags: 0
@@ -367,41 +453,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114424546717533840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354696869589136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54702493502cde546afcf3342cb5c46a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  js1: {fileID: 114004385071925958}
-  light1: {fileID: 108911242849293828}
-  light2: {fileID: 108386637110275112}
-  Roomlight1: {fileID: 0}
-  Roomlight2: {fileID: 0}
-  IsReady: 0
---- !u!114 &114004385071925958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354696869589136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daf38276d32529846910729ba9dc1bf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlowStickCrackAudio: {fileID: 82728581830466162}
-  FirstScareAudio: {fileID: 82534216286053208}
-  light1: {fileID: 108911242849293828}
-  light2: {fileID: 108386637110275112}
-  SSH: 0
 --- !u!82 &82081488887997136
 AudioSource:
   m_ObjectHideFlags: 0
@@ -498,63 +549,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114521985849435414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354696869589136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95515684746d41d4d8c2d39addc3490b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  JS1: {fileID: 114424546717533840}
-  ScreamAudio: {fileID: 82081488887997136}
-  light1: {fileID: 108386637110275112}
-  light2: {fileID: 108911242849293828}
-  VRHeadset: {fileID: 0}
---- !u!65 &1785615960273029826
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354696869589136}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.02559235, y: 0.022316987, z: 0.02559235}
-  m_Center: {x: 0.0000000023283064, y: -0.00070814975, z: -0.0000000023283064}
---- !u!114 &2063795248099482371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354696869589136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b4d829c06177747ba93c487b3eb1d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_activeHand: {fileID: 0}
---- !u!114 &8942555105996563978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354696869589136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 236bd9351a07fa6449f9a6b3435838f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BreathingAudio: {fileID: 0}
-  VRHeadset: {fileID: 0}
 --- !u!1 &1532398543893998
 GameObject:
   m_ObjectHideFlags: 0
